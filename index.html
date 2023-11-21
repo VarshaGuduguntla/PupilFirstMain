@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+            background-color: #f5f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input,
+        form button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: rgb(76, 92, 175);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 20px;
+            margin-left: 5px;
+            
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #d6c1c1;
+        }
+
+        th {
+            background-color: #534caf;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form id="userregistrationForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="dob">Dob</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="acceptTerms">
+            Accept terms?<input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Dob</th>
+                <th>Accepted terms?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- dynamically contents get added here -->
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
